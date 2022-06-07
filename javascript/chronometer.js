@@ -42,7 +42,12 @@ class Chronometer {
   split() {
     let minutes = this.computeTwoDigitNumber(this.getMinutes());
     let seconds = this.computeTwoDigitNumber(this.getSeconds());
+    let milis = this.computeTwoDigitNumber(this.getMilisec());
     return `${minutes}:${seconds}`;
+  }
+
+  getMilisec() {
+    return Math.floor(this.currentTime / 1000);
   }
 }
 
